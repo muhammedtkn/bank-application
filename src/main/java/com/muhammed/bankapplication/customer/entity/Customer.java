@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name="CUSTOMER")
 @Getter
@@ -21,8 +23,8 @@ public class Customer extends BaseEntity {
     @Column(name="SURNAME",nullable = false,length = 30)
     private  String surname;
 
-    @Column(name="IDENTIY_NO",nullable = false)
-    private  Long identiyNo;
+    @Column(name="IDENTIY_NO",nullable = false,unique = true)
+    private Long identiyNo;
 
     @Column(name="PASSWORD",nullable = false,length = 30)
     private  String password;
