@@ -19,7 +19,6 @@ import java.util.List;
 public class CustomerController {
 
     private final CustomerService customerService;
-    private final PasswordEncoder passwordEncoder;
 
     @GetMapping
     public ResponseEntity findAll(){
